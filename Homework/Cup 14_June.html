@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+                * {
+                        margin: 0px;
+                        padding: 0px;
+                        box-sizing: border-box;
+                }
+
+                .main {
+                        padding-top: 40vh;
+                        display: flex;
+                        height: 100vh;
+                        background-color: rgb(188, 224, 239);
+                        justify-content: center;
+
+                }
+
+                .cup-plate {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                }
+
+                .bowl {
+                        border-radius: 0px 0px 10vw 10vw;
+                        width: 30vw;
+                        height: 20vw;
+                        background-color: white;
+                        background-image: linear-gradient(to bottom right, white 45%, rgb(245, 242, 242) 0%);
+                        box-shadow: 0px 2.5px rgb(137, 134, 134);
+                }
+
+                .handle {
+                        position: relative;
+                        border-radius: 0px 10vw 10vw 0px;
+                        width: 10vw;
+                        height: 10vw;
+                        left: -7.5vw;
+                        background-color: rgb(245, 242, 242);
+                        -webkit-mask-image: radial-gradient(transparent 3vw, #fff 0px);
+                        mask-image: radial-gradient(transparent 3vw, #fff 0px);
+                }
+
+                .plate {
+                        position: relative;
+                        border-radius: 0px 0px 5vw 5vw;
+                        width: 40vw;
+                        height: 5vw;
+                        top: -1vw;
+                        background-color: rgb(245, 242, 242);
+                        box-shadow: 0px 2.5px rgb(137, 134, 134);
+                }
+
+                .vapours {
+                        position: absolute;
+                        animation-name: vapours;
+                        animation-duration: 5s;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                }
+
+                .v1 {
+                        left: 38vw;
+                }
+
+                .v1 {
+                        left: 40vw;
+                        animation-delay: 1s;
+                }
+
+                .v3 {
+                        left: 42vw;
+                        animation-delay: 2s;
+                }
+
+                .v4 {
+                        left: 44vw;
+                        animation-delay: 3s;
+                }
+
+                .v5 {
+                        left: 46vw;
+                        animation-delay: 4s;
+                }
+
+                @keyframes vapours {
+                        from {
+                                background-color: rgba(245, 242, 242, 0.3);
+                                width: 5vw;
+                                height: 5vw;
+                                border-radius: 2.5vw;
+                                top: 35vh;
+                        }
+
+                        to {
+                                background-color: rgb(188, 224, 239);
+                                width: 15vw;
+                                height: 15vw;
+                                border-radius: 7.5vw;
+                                top: 0vh;
+                        }
+                }
+        </style>
+</head>
+
+<body>
+        <div class="main">
+
+                <div class="vapours v1"></div>
+                <div class="vapours v2"></div>
+                <div class="vapours v3"></div>
+                <div class="vapours v4"></div>
+                <div class="vapours v5"></div>
+
+                <div class="cup-plate">
+                        <div class="bowl"></div>
+                        <div class="plate"></div>
+
+                </div>
+                <div class="handle"></div>
+
+        </div>
+</body>
+
+</html>

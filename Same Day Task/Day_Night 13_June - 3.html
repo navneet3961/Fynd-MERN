@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+                * {
+                        margin: 0px;
+                        padding: 0px;
+                        box-sizing: border-box;
+                }
+
+                body {
+                        background-image: url("day.jpeg");
+                        background-repeat: no-repeat;
+                        background-size: 100vw 100vh;
+                        transition: background-image 3s;
+                }
+
+                body:hover {
+                        background-image: url("night.jpeg");
+                }
+
+                div {
+                        margin: 10px;
+                        border-radius: 150px;
+                        position: absolute;
+                        width: 150px;
+                        height: 150px;
+                        background-image: radial-gradient(red 1%, yellow);
+                        transition: background-image 3s, transform 3s;
+                }
+
+                div:hover {
+                        background-image: radial-gradient(rgb(155, 153, 153), white);
+                        transform: translateX(70vw);
+                }
+        </style>
+</head>
+
+<body>
+        <div></div>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play with grid</title>
+    <style>
+        body * {
+            margin: 1px;
+            border-radius: 2px;
+            padding-top: 5px;
+        }
+
+        header {
+            grid-area: header;
+            background-color: rgb(228, 140, 140);
+        }
+
+        .box1 {
+            grid-area: box1;
+            background-color: lightblue;
+        }
+
+        .box2 {
+            grid-area: box2;
+            background-color: rgb(158, 141, 175);
+        }
+
+        .box3 {
+            grid-area: box3;
+            background-color: skyblue;
+        }
+
+        .section {
+            grid-area: section;
+            background-color: rgb(239, 239, 160);
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: burlywood;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: rgb(228, 140, 140);
+        }
+
+        body {
+            text-align: center;
+            height: 100vh;
+            display: grid;
+            grid-template-areas:
+                'header header header header'
+                'box1 box2 box3 sidebar'
+                'section section section sidebar'
+                'footer footer footer footer'
+
+            ;
+
+            grid-template-rows: 0.2fr 1.0fr 2.7fr 0.2fr;
+            grid-template-columns: 1.1fr 1.1fr 1.1fr 0.7fr;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        Header
+    </header>
+
+    <div class="box1">Box 1</div>
+    <div class="box2">Box 2</div>
+    <div class="box3">Box 3</div>
+
+    <div class="section">Section</div>
+    <div class="sidebar">Sidebar</div>
+
+    <footer>
+        Footer
+    </footer>
+</body>
+
+</html>

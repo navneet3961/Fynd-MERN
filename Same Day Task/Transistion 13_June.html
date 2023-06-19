@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+                * {
+                        margin: 0px;
+                        padding: 0px;
+                        box-sizing: border-box;
+                }
+
+                nav {
+                        width: 100vw;
+                }
+
+                div {
+                        height: 200px;
+                        width: 300px;
+                }
+
+                .div1 {
+                        background-color: rgb(134, 155, 174);
+                }
+
+                .div2 {
+                        background-color: aqua;
+                }
+
+                .div3 {
+                        background-color: rgb(176, 205, 205);
+                }
+
+                .div4 {
+                        background-color: skyblue;
+                }
+
+                div {
+                        padding-top: 60px;
+                        font-size: 20px;
+                        text-align: center;
+                }
+
+                nav:hover>div {
+                        width: 600px;
+                        transition: width 3s;
+                }
+        </style>
+</head>
+
+<body>
+        <nav>
+                <div class="div1"> Home </div>
+                <div class="div2"> About </div>
+                <div class="div3"> Contact Us </div>
+                <div class="div4"> Logout </div>
+        </nav>
+</body>
+
+</html>

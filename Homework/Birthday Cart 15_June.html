@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+                * {
+                        margin: 0px;
+                        padding: 0px;
+                        box-sizing: border-box;
+                }
+
+                .main {
+                        display: flex;
+                        flex-direction: row-reverse;
+                        height: 100vh;
+                        background-color: rgb(188, 224, 239);
+                }
+
+                /* Outside */
+
+                .outside {
+                        margin: auto;
+                        position: absolute;
+                        right: 5vw;
+                        width: 45vw;
+                        height: 60vw;
+                        background-color: white;
+                        padding: 5vw;
+                        top: 0;
+                        bottom: 0;
+                        border-radius: 0 10% 10% 0;
+                        z-index: 3;
+                }
+
+                p {
+
+                        font-size: 4vw;
+                }
+
+                .candle_top {
+                        background: radial-gradient(red, yellow);
+                        width: 2.5vw;
+                        height: 2.5vw;
+                        border-radius: 0% 50% 50% 50%;
+                        transform: rotate(45deg);
+                }
+
+                .candle_bottom {
+                        background: repeating-linear-gradient(45deg, red 20%, yellow 40%);
+                        width: 2.5vw;
+                        height: 5vw;
+                }
+
+                .cake {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                }
+
+                .cake_top,
+                .cake_mid,
+                .cake_bottom {
+                        border-radius: 1vh 1vh 0px 0px;
+                        width: 25vw;
+                        height: 10vw;
+                        background-color: crimson;
+                        background: linear-gradient(to bottom, crimson 0% 50%, yellow 50% 75%);
+                }
+
+                .cake_top {
+                        width: 20vw;
+                }
+
+                .cake_mid {
+                        width: 22.5vw;
+                }
+
+                .card:hover>.outside {
+                        z-index: -1;
+                }
+
+                .card:hover>.inside {
+                        transform: rotate(-5deg);
+                        /* width: 80vw; */
+                }
+
+                .card:hover>.inside>.left {
+                        width: 90vw;
+                }
+
+                /* Inside */
+
+                .inside {
+                        margin: auto;
+                        position: absolute;
+                        right: 5vw;
+                        width: 45vw;
+                        height: 60vw;
+                        background-color: white;
+                        padding: 5vw;
+                        top: 0;
+                        bottom: 0;
+                        border-radius: 0 10% 10% 0;
+                        z-index: 2;
+                        transition: transform 2s;
+                }
+
+                span {
+                        font-size: 20vw;
+                }
+
+                .left {
+                        border: 1px solid red;
+                        margin: auto;
+                        position: absolute;
+                        right: 5vw;
+                        width: 40vw;
+                        height: 60vw;
+                        background-color: white;
+                        /* padding: 5vw; */
+                        top: 0;
+                        bottom: 0;
+                        border-radius: 10% 0% 0% 10%;
+                        z-index: -1;
+                        transition: width 2s;
+
+                }
+
+                .right {
+                        border: 1px solid red;
+                        margin: auto;
+                        position: absolute;
+                        right: 5vw;
+                        width: 40vw;
+                        height: 60vw;
+                        background-color: white;
+                        /* padding: 5vw; */
+                        top: 0;
+                        bottom: 0;
+                        border-radius: 10% 0% 0% 10%;
+                        z-index: -1;
+                        transition: width 2s;
+
+                }
+        </style>
+</head>
+
+<body>
+        <div class="main">
+                <div class="card">
+                        <div class="outside">
+                                <p>
+                                        HAPPY BIRTHDAY <br><br>
+                                </p>
+
+                                <div class="cake">
+                                        <div class="candle">
+                                                <div class="candle_top"></div>
+                                                <div class="candle_bottom"></div>
+                                        </div>
+                                        <div class="cake_top"></div>
+                                        <div class="cake_mid"></div>
+                                        <div class="cake_bottom"></div>
+                                </div>
+                        </div>
+
+                        <div class="inside">
+                                <div class="left">
+
+                                </div>
+                                <div class="right">
+                                        <p>
+                                                Wishing you a very happy and glorious birthday! <br><br>
+                                        </p>
+                                        <p>
+                                                <span>🎁</span>
+                                        </p>
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="./amazon_title_logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title> Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in </title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Calibri;
+            /* border: 1px solid red; */
+            /* color: white; */
+        }
+
+        body {
+            min-width: max-content;
+            background-color: rgb(226, 222, 222);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        main {
+            padding: 400px 30px 20px 30px;
+        }
+
+        .box1 {
+            grid-area: box1;
+        }
+
+        .box2 {
+            grid-area: box2;
+        }
+
+        .box3 {
+            grid-area: box3;
+        }
+
+        .box4 {
+            grid-area: box4;
+        }
+
+        .box5 {
+            grid-area: box5;
+        }
+
+        .box7 {
+            grid-area: box7;
+        }
+
+        .box8 {
+            grid-area: box8;
+        }
+
+        .box9 {
+            grid-area: box9;
+        }
+
+        .box10 {
+            grid-area: box10;
+        }
+
+        .grid-box>div {
+            padding: 20px;
+            background-color: white;
+            width: 100%;
+        }
+
+        .grid-box {
+            display: grid;
+            gap: 10px;
+            grid-template-areas:
+                'box1 box2 box3 box4'
+                'box5 box5 box5 box5'
+                'box7 box8 box9 box10'
+            ;
+
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        .ibox1 {
+            grid-area: ibox1;
+        }
+
+        .ibox2 {
+            grid-area: ibox2;
+        }
+
+        .ibox3 {
+            grid-area: ibox3;
+        }
+
+        .ibox4 {
+            grid-area: ibox4;
+        }
+
+        .inner-grid>div>* {
+            display: block;
+        }
+
+        .inner-grid {
+            display: grid;
+            gap: 10px;
+            grid-template-areas:
+                'ibox1 ibox2'
+                'ibox3 ibox4'
+            ;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flex-box>div {
+            display: inline-block;
+        }
+
+        .table {
+            background-color: rgb(35, 47, 63);
+            padding: 25px 500px;
+            color: white;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .table>div>span {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .table>div>ul>li {
+            list-style-type: none;
+            font-size: 16px;
+            padding: 5px 0;
+            opacity: 0.7;
+        }
+
+        .last>div {
+            background-color: #131a22;
+            color: white;
+            padding: 25px 500px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .last>div>div>span {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .last>div>div>ul>li {
+            list-style-type: none;
+            font-size: 16px;
+            opacity: 0.7;
+        }
+
+        .background {
+            position: absolute;
+            background: url("https://m.media-amazon.com/images/I/61aURrton0L._SX3000_.jpg");
+            width: 100%;
+            height: 1000px;
+            z-index: -1;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    </style>
+
+    <link rel="stylesheet" href="./header.css">
+</head>
+
+<body>
+
+    <div class="nav1">
+        <div class="logo do-hover">
+            <a href="#"><img class="amazon-logo" src="./amazon_logo.png" alt="Amazon"><span
+                    style="font-size: 16px;">.in</span></a>
+        </div>
+
+        <div class="address do-hover">
+            <img src="./location_icon.png" alt="address">
+
+            <div>
+                <div style="font-size: 12px; opacity: 0.5;"> Hello </div>
+                <div style="font-size: 16px; font-weight: bold;"> Select your address </div>
+            </div>
+        </div>
+
+        <div class="search-box">
+            <button class="select-category"> All &nbsp;&nbsp; <i class="fa fa-caret-down"></i></button>
+
+            <input type="text" class="search-input" placeholder="Search Amazon.in" name="search">
+
+            <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+        </div>
+
+        <div class="language do-hover">
+            <div class="icp-nav-flag icp-nav-flag-in"></div>
+            <div style="font-weight: bold;">
+                &nbsp; EN
+                <i class="fa fa-caret-down" style="font-size: 10px; opacity: 0.5;"></i>
+            </div>
+        </div>
+
+        <div class="do-hover" style="min-width: 125px;">
+            <div style=" font-size: 12px;"> Hello, sign in </div>
+            <div style="font-size: 16px; font-weight: bold;">
+                Account & Lists
+                <i class="fa fa-caret-down" style="font-size: 10px; opacity: 0.5;"></i>
+            </div>
+        </div>
+
+        <div class="do-hover" style="min-width: 75px;">
+            <div style="font-size: 12px;"> Returns</div>
+            <div style="font-size: 16px; font-weight: bold;"> & Orders </div>
+        </div>
+
+        <div class="cart do-hover">
+            <img src="./cart.png" alt="">
+            <span style="left: -22px; top: -20px; color: orange;">0</span>
+            <span style="left: -10px; top: -3px">Cart</span>
+        </div>
+    </div>
+
+    <div class="nav2">
+        <div><a href=""><i class="fa fa-bars"></i> All </a></div>
+        <div><a href=""> Amazon miniTV </a></div>
+        <div><a href=""> Sell </a></div>
+        <div><a href=""> Best Sellers </a></div>
+        <div><a href=""> Mobiles </a></div>
+        <div><a href=""> Today's Deals </a></div>
+        <div><a href=""> Customer Service </a></div>
+        <div><a href=""> New Releases </a></div>
+        <div><a href=""> Electronics </a></div>
+        <div><a href=""> Prime <i class="fa fa-caret-down"></i></a></div>
+        <div><a href=""> Home & Kitchen </a></div>
+        <div><a href=""> Amazon Pay </a></div>
+    </div>
+
+    <div class="background"></div>
+    <main>
+        <div class="grid-box">
+            <div class="box1">
+                <span style="font-size: 24px; font-weight: bold;"> Up to 70% off | Styles for men </span>
+                <br>
+                <br>
+                <div class="inner-grid">
+                    <div class="ibox1">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-1-186-116._SY116_CB636110853_.jpg">
+                        Clothing
+                    </div>
+                    <div class="ibox2">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-2-186-116._SY116_CB636110853_.jpg">
+                        Footwear
+                    </div>
+                    <div class="ibox3">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-3-186-116._SY116_CB636110853_.jpg">
+                        Watches
+                    </div>
+                    <div class="ibox4">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-4-186-116._SY116_CB636110853_.jpg">
+                        Bags & luggage
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <span style="color: rgb(3, 139, 193);"> Mega Fashion Days </span>
+            </div>
+
+            <div class="box2">
+                <span style="font-size: 24px; font-weight: bold;"> Up to 70% off | Clearance Store </span>
+                <br>
+                <br>
+
+                <img
+                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Electronics/Clearance/Clearance_store_Desktop_CC_1x._SY304_CB628315133_.jpg">
+
+                <br>
+                <br>
+                <span style="color: rgb(3, 139, 193);"> See more </span>
+            </div>
+
+            <div class="box3">
+                <span style="font-size: 24px; font-weight: bold;"> Bluetooth Calling Smartwatch starts at ₹1,999 </span>
+                <br>
+                <br>
+
+                <img
+                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wearables/PC_CategoryCard_379X304_1._SY304_CB614835787_.jpg">
+
+                <br>
+                <br>
+                <span style="color: rgb(3, 139, 193);"> Shop now </span>
+            </div>
+
+            <div class="box4">
+                <span style="font-size: 24px; font-weight: bold;"> Sign in for your best experience </span>
+                <br>
+                <br>
+
+                <button
+                    style="padding: 10px; background-color: rgba(245, 221, 4, 0.967); width: 100%; border: none; border-radius: 5px;">
+                    Sign in securely
+                </button>
+            </div>
+
+            <div class="box5">
+                <div class="deals">
+                    <span style="font-size: 28px; font-weight: bold;"> Today's Deals </span>
+                    &nbsp;
+                    <span style="font-size: 20px; color: rgb(3, 139, 193);"> See all deals </span>
+                </div>
+
+                <br>
+                <br>
+
+                <div class="flex-box">
+                    <div>
+                        <div
+                            style="margin: 5px 10px 5px 0; padding-top: 12.5px; width: 300px; height: 250px; background-color: rgb(242, 237, 237);text-align: center;">
+                            <img style="width: 225px; height: 225px; margin: auto; top: 0; bottom: 0;"
+                                src="https://m.media-amazon.com/images/I/81TBkVDGeGL._AC_SY200_.jpg">
+                        </div>
+
+                        <div>
+                            <div
+                                style="display: inline-block; background-color: crimson; color: white; padding: 5px 10px;">
+                                Up to 32 % off
+                            </div>
+                            <span style="color: crimson; font-weight: bold;">Deal of the Day</span>
+                        </div>
+
+                        <div>
+                            <span style="font-weight: 600;">Bata, Hush Puppies & more</span>
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <div
+                            style="margin: 5px 10px 5px 0; padding-top: 12.5px; width: 300px; height: 250px; background-color: rgb(242, 237, 237);text-align: center;">
+                            <img style="width: 225px; height: 225px; margin: auto; top: 0; bottom: 0;"
+                                src="https://m.media-amazon.com/images/I/81TBkVDGeGL._AC_SY200_.jpg">
+                        </div>
+
+                        <div>
+                            <div
+                                style="display: inline-block; background-color: crimson; color: white; padding: 5px 10px;">
+                                Up to 32 % off
+                            </div>
+                            <span style="color: crimson; font-weight: bold;">Deal of the Day</span>
+                        </div>
+
+                        <div>
+                            <span style="font-weight: 600;">Bata, Hush Puppies & more</span>
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <div
+                            style="margin: 5px 10px 5px 0; padding-top: 12.5px; width: 300px; height: 250px; background-color: rgb(242, 237, 237);text-align: center;">
+                            <img style="width: 225px; height: 225px; margin: auto; top: 0; bottom: 0;"
+                                src="https://m.media-amazon.com/images/I/81TBkVDGeGL._AC_SY200_.jpg">
+                        </div>
+
+                        <div>
+                            <div
+                                style="display: inline-block; background-color: crimson; color: white; padding: 5px 10px;">
+                                Up to 32 % off
+                            </div>
+                            <span style="color: crimson; font-weight: bold;">Deal of the Day</span>
+                        </div>
+
+                        <div>
+                            <span style="font-weight: 600;">Bata, Hush Puppies & more</span>
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <div
+                            style="margin: 5px 10px 5px 0; padding-top: 12.5px; width: 300px; height: 250px; background-color: rgb(242, 237, 237);text-align: center;">
+                            <img style="width: 225px; height: 225px; margin: auto; top: 0; bottom: 0;"
+                                src="https://m.media-amazon.com/images/I/81TBkVDGeGL._AC_SY200_.jpg">
+                        </div>
+
+                        <div>
+                            <div
+                                style="display: inline-block; background-color: crimson; color: white; padding: 5px 10px;">
+                                Up to 32 % off
+                            </div>
+                            <span style="color: crimson; font-weight: bold;">Deal of the Day</span>
+                        </div>
+
+                        <div>
+                            <span style="font-weight: 600;">Bata, Hush Puppies & more</span>
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <div
+                            style="margin: 5px 10px 5px 0; padding-top: 12.5px; width: 300px; height: 250px; background-color: rgb(242, 237, 237);text-align: center;">
+                            <img style="width: 225px; height: 225px; margin: auto; top: 0; bottom: 0;"
+                                src="https://m.media-amazon.com/images/I/81TBkVDGeGL._AC_SY200_.jpg">
+                        </div>
+
+                        <div>
+                            <div
+                                style="display: inline-block; background-color: crimson; color: white; padding: 5px 10px;">
+                                Up to 32 % off
+                            </div>
+                            <span style="color: crimson; font-weight: bold;">Deal of the Day</span>
+                        </div>
+
+                        <div>
+                            <span style="font-weight: 600;">Bata, Hush Puppies & more</span>
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <div
+                            style="margin: 5px 10px 5px 0; padding-top: 12.5px; width: 300px; height: 250px; background-color: rgb(242, 237, 237);text-align: center;">
+                            <img style="width: 225px; height: 225px; margin: auto; top: 0; bottom: 0;"
+                                src="https://m.media-amazon.com/images/I/81TBkVDGeGL._AC_SY200_.jpg">
+                        </div>
+
+                        <div>
+                            <div
+                                style="display: inline-block; background-color: crimson; color: white; padding: 5px 10px;">
+                                Up to 32 % off
+                            </div>
+                            <span style="color: crimson; font-weight: bold;">Deal of the Day</span>
+                        </div>
+
+                        <div>
+                            <span style="font-weight: 600;">Bata, Hush Puppies & more</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="box6"> Box 6 </div> -->
+
+            <div class="box7">
+                <span style="font-size: 24px; font-weight: bold;"> Up to 70% off | Styles for men </span>
+                <br>
+                <br>
+                <div class="inner-grid">
+                    <div class="ibox1">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-1-186-116._SY116_CB636110853_.jpg">
+                        Clothing
+                    </div>
+                    <div class="ibox2">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-2-186-116._SY116_CB636110853_.jpg">
+                        Footwear
+                    </div>
+                    <div>
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-3-186-116._SY116_CB636110853_.jpg">
+                        Watches
+                    </div>
+                    <div class="ibox4">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-4-186-116._SY116_CB636110853_.jpg">
+                        Bags & luggage
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <span style="color: rgb(3, 139, 193);"> Mega Fashion Days </span>
+            </div>
+
+            <div class="box8">
+                <span style="font-size: 24px; font-weight: bold;"> Up to 70% off | Styles for men </span>
+                <br>
+                <br>
+                <div class="inner-grid">
+                    <div class="ibox1">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-1-186-116._SY116_CB636110853_.jpg">
+                        Clothing
+                    </div>
+                    <div class="ibox2">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-2-186-116._SY116_CB636110853_.jpg">
+                        Footwear
+                    </div>
+                    <div class="ibox3">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-3-186-116._SY116_CB636110853_.jpg">
+                        Watches
+                    </div>
+                    <div class="ibox4">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-4-186-116._SY116_CB636110853_.jpg">
+                        Bags & luggage
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <span style="color: rgb(3, 139, 193);"> Mega Fashion Days </span>
+            </div>
+
+            <div class="box9">
+                <span style="font-size: 24px; font-weight: bold;"> Up to 70% off | Styles for men </span>
+                <br>
+                <br>
+                <div class="inner-grid">
+                    <div class="ibox1">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-1-186-116._SY116_CB636110853_.jpg">
+                        Clothing
+                    </div>
+                    <div class="ibox2">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-2-186-116._SY116_CB636110853_.jpg">
+                        Footwear
+                    </div>
+                    <div class="ibox3">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-3-186-116._SY116_CB636110853_.jpg">
+                        Watches
+                    </div>
+                    <div class="ibox4">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-4-186-116._SY116_CB636110853_.jpg">
+                        Bags & luggage
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <span style="color: rgb(3, 139, 193);"> Mega Fashion Days </span>
+            </div>
+
+            <div class="box10">
+                <span style="font-size: 24px; font-weight: bold;"> Up to 70% off | Styles for men </span>
+                <br>
+                <br>
+                <div class="inner-grid">
+                    <div class="ibox1">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-1-186-116._SY116_CB636110853_.jpg">
+                        Clothing
+                    </div>
+                    <div class="ibox2">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-2-186-116._SY116_CB636110853_.jpg">
+                        Footwear
+                    </div>
+                    <div class="ibox3">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-3-186-116._SY116_CB636110853_.jpg">
+                        Watches
+                    </div>
+                    <div class="ibox4">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-4-186-116._SY116_CB636110853_.jpg">
+                        Bags & luggage
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <span style="color: rgb(3, 139, 193);"> Mega Fashion Days </span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div style="background-color: white; padding: 50px 0 30px 0;">
+            <div class="sign-in" style="padding: 30px; border: 1px solid gainsboro; border-radius: 10px 10px 0 0;">
+                <center>
+                    <div style="font-size: 18px;">See personalized recommendations</div>
+                    <button
+                        style="padding: 10px; background-color: orange; width: 15%; border: none; border-radius: 5px; font-size: 20px; font-weight: bold;">
+                        Sign in
+                    </button>
+                    <div>
+                        New customer? <a href="" style="color: rgb(3, 139, 193);"> Start here</a>
+                    </div>
+                </center>
+            </div>
+        </div>
+
+        <div style="height: 50px; color: white; font-weight: bold; background-color: rgb(54, 71, 89); padding: 12px;">
+            <center>Back to top</center>
+        </div>
+
+        <div class="table">
+
+            <div>
+                <span>Get to Know Us</span>
+                <br><br>
+                <ul>
+                    <li>About Us</li>
+                    <li>Careers</li>
+                    <li>Press Releases</li>
+                    <li>Amazon Science</li>
+                </ul>
+            </div>
+
+            <div>
+                <span>Connect with Us</span>
+                <br><br>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+
+                </ul>
+            </div>
+
+            <div>
+                <span>Make Money with Us</span>
+                <br><br>
+                <ul>
+                    <li>Sell on Amazon</li>
+                    <li>Sell under Amazon Accelerator</li>
+                    <li>Protect and Build Your Brand</li>
+                    <li>Amazon Global Selling</li>
+                </ul>
+            </div>
+
+            <div>
+                <span>Let Us Help You</span>
+                <br><br>
+                <ul>
+                    <li>Covid-19 and Amazon</li>
+                    <li>Your Account</li>
+                    <li>Return Centre</li>
+                    <li>Help</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="border: 0.5px solid #35414f;"></div>
+
+        <div class="language-footer" style="background-color: rgb(35, 47, 63); padding-bottom: 30px;">
+            <div style="display: flex; align-items: center; justify-content: center; padding: 25px;">
+                <img src="./amazon_logo.png" style="width: 100px;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div
+                    style="border: 2px solid gainsboro; border-radius: 5px; padding: 5px; color: white; display: flex; align-items: center; justify-content: center;">
+                    <span style="color: white;">&#127760;&#xfe0e;</span>
+                    &nbsp; English &nbsp; &nbsp; &nbsp;
+                    <span style="display: inline-block; color: gainsboro; font-size: 10px;"><i class="fa fa-caret-up"
+                            style="display: block;"></i> <i class="fa fa-caret-down"></i></span>
+                </div>
+            </div>
+            <center style="color: rgba(255, 255, 255, 0.7); font-size: 16px;">
+                India &nbsp;&nbsp; Australia &nbsp;&nbsp; China &nbsp;&nbsp; Brazil &nbsp;&nbsp; America &nbsp;&nbsp;
+                Germany
+            </center>
+        </div>
+
+        <div class="last">
+            <div>
+                <div>
+                    <span>AbeBooks</span>
+                    <ul>
+                        <li>Books, art</li>
+                        <li>& collections</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <span>Amazon Web Services</span>
+                    <ul>
+                        <li>Scalable Cloud</li>
+                        <li>Computing Services</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <span>Audible</span>
+                    <ul>
+                        <li>Download</li>
+                        <li>Audio Books</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <span>DPReview</span>
+                    <ul>
+                        <li>Digital</li>
+                        <li>Photography</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <span>IMDb</span>
+                    <ul>
+                        <li>Movies, TV</li>
+                        <li>& Celebrities</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div>
+                <span>Conditions of Use & Sale</span>
+                <span>Privacy Notice</span>
+                <span>Internet Based Ads</span>
+            </div>
+
+
+            <div>
+                &copy; 1996-2023, Amazon.com, Inc. or its affiliates
+            </div>
+
+        </div>
+
+
+    </footer>
+</body>
+
+</html>
